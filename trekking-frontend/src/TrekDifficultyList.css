@@ -1,0 +1,534 @@
+/* Import Google Fonts - Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* CSS Variables for Bright Orange Theme (re-used for consistency) */
+:root {
+    --primary-orange: #FF8C00; /* DarkOrange - A vibrant, deep orange */
+    --light-orange: #FFBF00;   /* Amber - A brighter, lighter orange */
+    --dark-orange: #CC7000;    /* A slightly darker, richer orange */
+    --extra-light-orange: #FFF6E6; /* Very light orange for backgrounds */
+    --text-dark: #333333;
+    --text-medium: #555555;
+    --text-light: #6c757d;
+    --white: #ffffff;
+    --black: #000000;
+    --border-light: #e0e0e0;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-medium: rgba(0, 0, 0, 0.2);
+    --shadow-strong: rgba(0, 0, 0, 0.3);
+    --border-radius-soft: 8px;
+    --border-radius-medium: 12px;
+    --transition-speed: 0.3s ease;
+}
+
+/* Base Styles (ensure Inter font is applied if not already in body) */
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-dark); /* Default text color */
+}
+
+/* Container */
+.trek-container {
+    background-image: url('https://i.ibb.co/twNDyBMR/pexels-stywo-1261728.jpg'); /* If placed in public/images */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem; /* Consistent padding */
+    position: relative;
+    color: var(--white); /* Text color over background image */
+    overflow: hidden; /* Prevent content overflow issues */
+}
+
+/* Dark transparent overlay for readability (for form) */
+.trek-overlay {
+    background: rgba(0, 0, 0, 0.7); /* Slightly darker overlay for better contrast */
+    padding: 40px; /* Increased padding */
+    border-radius: var(--border-radius-medium);
+    max-width: 650px; /* Slightly wider form for content */
+    width: 100%;
+    backdrop-filter: blur(8px); /* Stronger blur for modern look */
+    box-shadow: 0 10px 30px var(--shadow-medium); /* Enhanced shadow */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle white border */
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.trek-overlay:hover {
+    transform: translateY(-5px); /* Subtle lift on hover */
+    box-shadow: 0 15px 40px var(--shadow-strong);
+}
+
+/* Header (for form) */
+.trek-header {
+    text-align: center;
+    font-size: 2.5rem; /* Larger font size */
+    margin-bottom: 30px; /* More spacing */
+    color: var(--light-orange); /* Orange heading for contrast */
+    text-shadow: 1px 1px 3px var(--black);
+    font-weight: 700;
+}
+
+/* Form Layout */
+.trek-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Consistent spacing between sections */
+}
+
+.trek-section label {
+    display: block;
+    font-size: 1.1rem; /* Slightly larger labels */
+    margin-bottom: 8px;
+    color: var(--white);
+    font-weight: 500;
+}
+
+/* Text and Number Inputs */
+.text-input,
+.number-input {
+    width: 100%;
+    padding: 12px 15px; /* More padding */
+    border-radius: var(--border-radius-soft);
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle white border */
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white background */
+    color: var(--white);
+    font-size: 1rem;
+    outline: none; /* Remove default outline */
+    transition: border-color var(--transition-speed), background-color var(--transition-speed);
+}
+
+.text-input::placeholder,
+.number-input::placeholder {
+    color: rgba(255, 255, 255, 0.6); /* Lighter placeholder text */
+}
+
+.text-input:focus,
+.number-input:focus {
+    border-color: var(--light-orange); /* Orange border on focus */
+    background-color: rgba(255, 255, 255, 0.15); /* Slightly less transparent on focus */
+    box-shadow: 0 0 0 3px rgba(255, 191, 0, 0.3); /* Subtle orange glow */
+}
+
+/* Radio Button Group */
+.option-group {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 25px; /* More space between options */
+    margin-top: 10px;
+    justify-content: flex-start; /* Align options to the start */
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between radio button and text */
+    font-size: 1rem;
+    color: var(--white);
+    cursor: pointer;
+    transition: color var(--transition-speed);
+}
+
+.radio-label:hover {
+    color: var(--light-orange);
+}
+
+/* Custom Radio Button Appearance (Optional but recommended for consistency) */
+.radio-label input[type="radio"] {
+    /* Hide default radio button */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px; /* Custom size */
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.5); /* White border */
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: border-color var(--transition-speed), background-color var(--transition-speed);
+    cursor: pointer;
+    position: relative; /* For inner dot */
+}
+
+.radio-label input[type="radio"]:checked {
+    border-color: var(--primary-orange); /* Orange border when checked */
+    background-color: var(--primary-orange); /* Filled with orange when checked */
+}
+
+.radio-label input[type="radio"]:checked::after {
+    content: '';
+    display: block;
+    width: 10px; /* Inner dot size */
+    height: 10px;
+    background: var(--white); /* White inner dot */
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Submit Section */
+.submit-section {
+    text-align: center;
+    margin-top: 30px; /* More spacing */
+}
+
+.submit-button {
+    padding: 15px 35px; /* Larger padding for button */
+    font-size: 1.2rem; /* Larger font size */
+    border: none;
+    border-radius: 50px; /* Pill shape */
+    background-color: var(--primary-orange);
+    color: var(--white);
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color var(--transition-speed), transform var(--transition-speed), box-shadow var(--transition-speed);
+    box-shadow: 0 5px 15px var(--shadow-medium); /* Enhanced shadow */
+}
+
+.submit-button:hover {
+    background-color: var(--dark-orange);
+    transform: translateY(-3px); /* Lift on hover */
+    box-shadow: 0 8px 20px var(--shadow-strong);
+}
+
+.submit-button:active {
+    transform: translateY(0); /* Press effect */
+    box-shadow: 0 2px 5px var(--shadow-light);
+}
+
+/* Error Message */
+.error {
+    color: #ff8080; /* Soft red for errors */
+    font-size: 0.9rem;
+    margin-left: 0; /* Align error messages below input for better readability */
+    margin-top: 5px;
+    display: block; /* Ensure it takes full width */
+    text-align: left;
+    background-color: rgba(255, 128, 128, 0.1); /* Very light red background */
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 1px solid #ff8080;
+}
+
+/* Responsive Adjustments (for form) */
+@media (max-width: 992px) {
+    .trek-overlay {
+        padding: 30px 20px;
+        max-width: 90%;
+    }
+    .trek-header {
+        font-size: 2rem;
+        margin-bottom: 25px;
+    }
+    .trek-form {
+        gap: 15px;
+    }
+    .trek-section label {
+        font-size: 1rem;
+    }
+    .text-input,
+    .number-input {
+        padding: 10px 12px;
+    }
+    .option-group {
+        flex-direction: column; /* Stack radio options vertically */
+        gap: 10px;
+        align-items: flex-start;
+    }
+    .submit-button {
+        padding: 12px 25px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .trek-overlay {
+        padding: 30px 20px;
+        max-width: 90%;
+    }
+    .trek-header {
+        font-size: 2rem;
+        margin-bottom: 25px;
+    }
+    .trek-form {
+        gap: 15px;
+    }
+    .trek-section label {
+        font-size: 1rem;
+    }
+    .text-input,
+    .number-input {
+        padding: 10px 12px;
+    }
+    .option-group {
+        flex-direction: column; /* Stack radio options vertically */
+        gap: 10px;
+        align-items: flex-start;
+    }
+    .submit-button {
+        padding: 12px 25px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .trek-overlay {
+        padding: 25px 15px;
+    }
+    .trek-header {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+    .submit-button {
+        width: 100%; /* Full width on very small screens */
+        padding: 12px 20px;
+    }
+}
+
+/* --- Enhanced Trek List Section --- */
+
+.trek-list-container {
+    padding: 2.5rem 2rem; /* Increased padding to make it a bit bigger */
+    background-color: var(--primary-orange); /* Use primary orange for background */
+    min-height: auto;
+    height: 80vh; /* Set a specific height for the container, making it bigger */
+    max-height: 800px; /* Increased max height before scrolling */
+    width: 85%; /* Increased width */
+    max-width: 1000px; /* Increased max width */
+    margin: auto; /* Center the container using auto margins */
+    font-family: 'Inter', sans-serif; /* Consistent font */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto; /* Add vertical scrollbar when content overflows */
+    overflow-x: hidden; /* Prevent horizontal scroll from inner elements */
+    border-radius: var(--border-radius-medium); /* Keep rounded corners */
+    box-shadow: 0 15px 40px var(--shadow-medium); /* Stronger shadow for depth */
+}
+
+/* Style the scrollbar (Webkit browsers) */
+.trek-list-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.trek-list-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1); /* Light transparent track */
+    border-radius: 10px;
+}
+
+.trek-list-container::-webkit-scrollbar-thumb {
+    background: var(--light-orange); /* Orange thumb */
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+}
+
+.trek-list-container::-webkit-scrollbar-thumb:hover {
+    background: var(--dark-orange); /* Darker orange on hover */
+}
+
+
+.trek-list-header {
+    text-align: center;
+    font-size: 2.5rem; /* Increased font size for main header */
+    margin-bottom: 2.5rem; /* Increased spacing */
+    color: var(--white); /* White text against orange background */
+    font-weight: 700;
+    text-shadow: 1px 1px 3px var(--black); /* Adjusted shadow */
+    width: 100%;
+    max-width: 950px; /* Constrain header width to match container */
+    padding: 10px 0; /* Add padding to header if it sticks out */
+}
+
+.trek-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Increased space between cards */
+    align-items: center;
+    width: 100%;
+    max-width: 900px; /* Increased max width for the cards section */
+    flex-grow: 1; /* Allow cards section to grow and take available space */
+}
+
+.trek-card {
+    width: 98%; /* Slightly wider cards to fill space */
+    max-width: 880px; /* Increased max width */
+    background: var(--white);
+    border-radius: var(--border-radius-medium);
+    box-shadow: 0 6px 15px var(--shadow-medium); /* Stronger shadow */
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    padding: 25px 35px; /* Increased padding */
+    border: 1px solid var(--border-light); /* Subtle border */
+}
+
+.trek-card:hover {
+    transform: translateY(-5px); /* Lift on hover */
+    box-shadow: 0 10px 25px var(--shadow-strong); /* Stronger shadow on hover */
+}
+
+.trek-image {
+    width: 200px; /* Increased image width */
+    height: 150px; /* Increased image height */
+    object-fit: cover;
+    border-radius: var(--border-radius-soft);
+    margin-right: 30px; /* Increased space between image and details */
+    flex-shrink: 0; /* Prevent image from shrinking */
+    box-shadow: 0 2px 8px var(--shadow-light); /* Subtle shadow for image */
+}
+
+.trek-details {
+    flex: 1; /* Allow details to take remaining space */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left */
+}
+
+.trek-name {
+    margin: 0 0 8px; /* Adjusted margin */
+    font-size: 1.6rem; /* Increased font size */
+    color: var(--text-dark);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.trek-region {
+    font-size: 1.05rem; /* Increased font size */
+    color: var(--text-medium);
+    margin-bottom: 15px; /* Increased spacing */
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+}
+
+.view-details-btn {
+    padding: 10px 25px; /* Increased padding for button */
+    font-size: 1.05rem; /* Increased font size */
+    background-color: var(--light-orange); /* Use light orange for button */
+    color: var(--white);
+    border: none;
+    border-radius: 50px; /* Pill shape */
+    cursor: pointer;
+    align-self: flex-start;
+    font-weight: 600;
+    transition: background-color var(--transition-speed), transform var(--transition-speed), box-shadow var(--transition-speed);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2); /* Adjusted shadow */
+}
+
+.view-details-btn:hover {
+    background-color: var(--dark-orange); /* Darker orange on hover */
+    transform: translateY(-3px); /* Lift on hover */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* Stronger shadow on hover */
+}
+
+.message {
+    font-size: 1.15rem; /* Increased message font size */
+    text-align: center;
+    margin-top: 3rem; /* Increased margin */
+    color: var(--white); /* White message over orange background */
+    font-weight: 500;
+}
+
+/* Responsive Adjustments (for trek list) */
+@media (max-width: 992px) {
+    .trek-list-container {
+        padding: 2rem 1.5rem;
+        width: 90%;
+        max-width: 850px;
+        height: 75vh; /* Adjusted height */
+        max-height: 700px; /* Adjusted max-height */
+    }
+    .trek-list-header {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    .trek-card {
+        flex-direction: column; /* Stack image and details vertically */
+        text-align: center;
+        padding: 20px;
+        width: 95%;
+        max-width: 650px;
+    }
+    .trek-image {
+        margin-right: 0;
+        margin-bottom: 15px; /* Space between image and details when stacked */
+        width: 100%;
+        height: auto;
+        max-height: 120px;
+    }
+    .trek-name {
+        font-size: 1.4rem;
+        margin-bottom: 8px;
+    }
+    .trek-region {
+        font-size: 0.95rem;
+        margin-bottom: 15px;
+    }
+    .view-details-btn {
+        align-self: center; /* Center button when stacked */
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .trek-list-container {
+        padding: 1.5rem 1rem;
+        height: 70vh; /* Adjusted height */
+        max-height: 600px; /* Adjusted max-height */
+    }
+    .trek-list-header {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+    .trek-card {
+        padding: 15px;
+        width: 100%;
+    }
+    .trek-image {
+        max-height: 100px;
+    }
+    .trek-name {
+        font-size: 1.2rem;
+    }
+    .trek-region {
+        font-size: 0.9rem;
+    }
+    .message {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .trek-list-container {
+        padding: 1rem 0.8rem;
+        height: 65vh; /* Adjusted height */
+        max-height: 550px; /* Adjusted max-height */
+    }
+    .trek-list-header {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .trek-card {
+        padding: 12px;
+    }
+    .trek-image {
+        height: 80px;
+    }
+    .trek-name {
+        font-size: 1.1rem;
+    }
+    .trek-region {
+        font-size: 0.85rem;
+    }
+    .view-details-btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}

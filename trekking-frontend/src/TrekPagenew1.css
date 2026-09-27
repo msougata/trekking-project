@@ -1,0 +1,614 @@
+/* Enable scrolling for the body */
+body {
+    height: 100%;
+    overflow-y: auto;  /* Allow vertical scrolling when content overflows */
+    margin: 0;  /* Remove default margin */
+  }
+  
+  /* Trek Carousel Container */
+  .trek-carousel-container {
+    width: 100%;  /* Set width to full screen width */
+    padding-top: 40px;
+    margin: 0; /* Remove any margin */
+    overflow: hidden;  /* Optional: hides anything outside the carousel container */
+  }
+  
+  .carousel {
+    width: 100%; /* Ensure carousel spans the entire width */
+    height: auto;  /* Ensure height stays flexible, no fixed height applied */
+  }
+  
+  .carousel-inner {
+    width: 100%; /* Ensures the inner carousel also spans the full width */
+  }
+  
+  .carousel-item img {
+    max-height: 400px;
+    width: 100%; /* Make images stretch to full width of carousel */
+    height: auto; /* Keep the height as is, preserving the aspect ratio */
+    object-fit: cover;
+  }
+  .carousel-caption h1 {
+  color: #ffffff; /* Change to your preferred color */
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+.carousel-caption .btn-primary {
+  background-color: #ff0000; /* Change to desired color */
+  border-color: #ff6b6b;
+  color: #fff;
+}
+
+.carousel-caption .btn-primary:hover {
+  background-color: #ff4c4c;
+  border-color: #ff4c4c;
+}
+
+  
+  .bd-placeholder-img {
+    height: 400px;
+    width: 100%;
+    background-color: #6c757d;
+    display: block;
+  }
+  
+  /* Icon Section Styling */
+  .icon_sec {
+    width: 100%;
+    background-color: #ffffff;  /* White background for the box */
+    padding: 40px 0;
+    border: 1px solid #ddd;  /* Add a subtle border around the box */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);  /* Optional: Add a soft shadow for depth */
+    margin-top: 20px;  /* Ensure some space between sections */
+  }
+  
+  .icon_sec .container {
+    width: 100%;
+  }
+  
+  /* Icons inside the box */
+  .col_icon {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .iconimg {
+    margin-bottom: 10px;
+  }
+  
+  .icon_img {
+    width: 80px;  /* Adjusted to make icons smaller */
+    height: 80px;  /* Adjusted to make icons smaller */
+  }
+  
+  .info .detail {
+    font-size: 14px;
+    color: #6c757d;
+  }
+  
+  .info .bold {
+    font-size: 16px;
+    font-weight: bold;
+    color: #343a40;
+  }
+  
+  /* Contact box styling */
+  .column4 {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .column4 h6 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .column4 a {
+    display: block;
+    font-size: 16px;
+    color: #ff0000;
+    text-decoration: none;
+    margin-bottom: 10px;
+  }
+  
+  .column4 a:hover {
+    text-decoration: underline;
+  }
+  
+  .column4 i {
+    margin-right: 8px;
+  }
+
+  /* Styling the 3D Box for the Price Section */
+.custom-3d-box {
+    width: 100%;
+    background-color: #fff;
+    padding: 40px 20px;
+    margin-top: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    transform: perspective(1000px) rotateX(0deg);
+    transition: transform 0.3s ease;
+  }
+  
+  .custom-3d-box:hover {
+    transform: perspective(1000px) rotateX(5deg);
+  }
+  
+  .custom-3d-box .container {
+    width: 100%;
+  }
+  
+  .custom-3d-box .price {
+    font-size: 36px;
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .custom-3d-box .usdButtonDiv button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .custom-3d-box .usdButtonDiv button:hover {
+    background-color: #0056b3;
+  }
+  
+  .custom-3d-box .dept {
+    padding: 20px;
+  }
+  
+  .custom-3d-box .dept .fdtitle {
+    font-size: 20px;
+    color: #343a40;
+    margin-bottom: 10px;
+  }
+  
+  .custom-3d-box .list-group-item {
+    cursor: pointer;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+  }
+  
+  .custom-3d-box .list-group-item i {
+    margin-right: 10px;
+  }
+  
+  .custom-3d-box .card-body-trek a {
+    display: block;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  .custom-3d-box .card-body-trek a:hover {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .custom-3d-box .price_desc {
+    font-size: 14px;
+    color: #6c757d;
+  }
+  
+  .custom-3d-box .price-desc li {
+    padding: 5px 0;
+  }
+  
+  .custom-3d-box .DivAdd .price-btn {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 12px 20px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d32f2f;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+  }
+  
+  .custom-3d-box .DivAdd .price-btn:hover {
+    background-color: #ff9898;
+  }
+
+  .price_desc ul {
+    padding-left: 20px;  /* Ensures bullets appear but aren't too far */
+    list-style-position: inside;
+    margin: 0;
+    padding-bottom: 10px;
+  }
+  
+  .price_desc li {
+    text-align: left;
+    margin-left: 0;
+    padding-left: 0;
+    
+  }
+  
+  /* Optional: Remove any custom div styling that might offset the bullet */
+  .price_desc ul > div {
+    padding: 0;
+    margin: 0;
+  }
+  
+  #fixeddep {
+    background-color: #f5f5f5; /* Light gray background */
+    color: #333; /* Darker text for readability */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  #fixeddep .fdtitle {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #d32f2f; /* Example: red title */
+  }
+  
+  #fixeddep .list-group-item {
+    background-color: #ff0000; /* White list items */
+    font-weight: bold;
+    color: #ffffff;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #fixeddep .list-group-item:hover {
+    background-color: #ff8d8d; /* Hover effect */
+  }
+  
+  #fixeddep .card-body-trek a.btn {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    margin: 5px;
+    padding: 5px 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d32f2f;
+    border-radius: 5px;
+    display: inline-block;
+    text-decoration: none;
+  }
+  
+  #fixeddep .card-body-trek a.btn:hover {
+    background-color: #ff1313;
+  }
+  
+  #price_details{
+    background-color: #f7dede; /* Light gray background */
+    color: #000000; /* Darker text for readability */
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .usdButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .usdButton .col-md-6 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .usdButton .price {
+    color: #d32f2f;
+    font-size: 50px;
+    font-weight: bold;
+  }
+  
+  .usdButtonDiv {
+    display: flex;
+    justify-content: center;
+  }
+  
+  #toggle-button {
+    padding: 16px 32px;
+    background-color: #d32f2f;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  #toggle-button:hover {
+    background-color: #b71c1c;
+  }
+
+ .overview {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 40px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.overview h2 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #ff0000;
+}
+
+.overview-bg{
+  background-color: #fbd8d8;
+  border-radius: 10px;
+}
+
+.overview-bg p {
+  text-align: left;
+  font-size: 16px;
+  color: #444;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.overview-bg span {
+  margin: 0 4px;
+  color: #888;
+}
+
+.participate{
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 40px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+.participate h2{
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #ff0000;
+}
+.participate li{
+  text-align: left;
+  background-color: #fddada;
+  border-radius: 5px;
+}
+.participate li::marker{
+ color: #d32f2f;
+}
+
+/* General Section Styling */
+.itinerary {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 2rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.itinerary h2 {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #f32727;
+}
+
+/* View Toggle Buttons */
+.itinerary button {
+  margin: 0.5rem 0.5rem;
+  padding: 0.6rem 1.4rem;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-quick {
+  background-color: #ff0000;
+  color: rgb(255, 255, 255);
+}
+
+.btn-detailed {
+  background-color: #ff0000;
+  color: white;
+}
+
+.btn-graph {
+  background-color: #ff0000;
+  color: white;
+}
+
+.itinerary button:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* Quick Itinerary */
+#quickItinerary h3 {
+  margin-top: 1.5rem;
+  text-align: left;
+  color: #ff0000;
+}
+
+#quickItinerary ul {
+  padding-left: 1.5rem;
+  text-align: left;
+}
+#quickItinerary li::marker{
+color: #ff0000;
+}
+
+#quickItinerary p {
+  margin-top: 0.5rem;
+  text-align: left;
+  font-size: 1rem;
+  color: #444;
+}
+
+#quickItinerary{
+  margin-top: 2rem;
+  background-color: #fcebeb;
+  border-radius: 10px;
+  padding: 2rem;
+  border: 10px solid #febbbb;
+}
+
+/* Tab Navigation */
+.tab {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.tab button.tablinks {
+  background-color: #ecf0f1;
+  border: 1px solid #bdc3c7;
+  margin: 0.3rem;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.tab button.tablinks.active {
+  background-color: #ff0000;
+  color: white;
+  border-color: #000000;
+}
+
+/* Tab Content */
+.tabcontent {
+  margin-top: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 2rem;
+  border: 1px solid #ddd;
+}
+
+.tabcontent h3 {
+  text-align: left;
+  color: #ff0000;
+  margin-bottom: 1rem;
+}
+
+.tabcontent ul {
+  text-align: left;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.tabcontent p {
+  text-align: justify;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.tabcontent img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .itinerary {
+    padding: 1rem;
+  }
+
+  .tabcontent {
+    padding: 1rem;
+  }
+
+  .itinerary button {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  .tab button.tablinks {
+    width: 100%;
+    margin: 0.4rem 0;
+  }
+}
+
+.btn-outline-primary{
+  color: #000;
+}
+.custom-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.custom-modal {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.cancel-btn {
+  background-color: #ccc;
+  color: #000;
+  border: none;
+  padding: 8px 16px;
+}
+
+.pay-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  text-decoration: none;
+  padding: 8px 16px;
+}
+
+.cancel-btn:hover {
+  background-color: #aaa;
+}
+
+.pay-btn:hover {
+  background-color: #218838;
+}
+
+.btn-outline-primary{
+  border-color: #ff0000;
+}
+.btn-outline-primary:hover{
+  background-color: #ff0000;
+}
+ body.modal-open{
+  overflow: hidden;
+ }

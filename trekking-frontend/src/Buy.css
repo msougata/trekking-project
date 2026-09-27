@@ -1,0 +1,150 @@
+/* Buy.css */
+
+/* Using more specific selectors to avoid conflicts with Home.css */
+
+.buy-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff; /* White background */
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: #333333; /* Dark text */
+  border: 1px solid #f0f0f0;
+}
+
+.buy-container h1 {
+  color: #26a69a; /* Sea Green */
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.buy-container h3 {
+  color: #26a69a; /* Sea Green */
+  margin: 20px 0;
+  font-weight: 600;
+}
+
+.buy-container .list-group-item {
+  background-color: #e0f2f1; /* Very light sea green */
+  border-color: #80cbc4; /* Light sea green */
+  color: #333333; /* Dark text */
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.buy-container .btn-primary {
+  background-color: #26a69a; /* Sea Green */
+  border: none;
+  padding: 10px 25px;
+  font-weight: 600;
+  margin-top: 10px;
+  color: white;
+}
+
+.buy-container .btn-primary:hover {
+  background-color: #00796b; /* Dark Sea Green */
+}
+
+.buy-container .btn-secondary {
+  background-color: #e0e0e0; /* Light gray */
+  border: none;
+  padding: 8px 16px;
+  font-weight: 500;
+  color: #333333; /* Dark text */
+}
+
+.buy-container .buy-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+/* Card styling */
+.buy-container .card {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.buy-container .card-header {
+  background-color: #26a69a; /* Sea Green */
+  color: white;
+  padding: 15px 20px;
+  font-weight: 600;
+}
+
+.buy-container .card-header h3 {
+  margin: 0;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.buy-container .card-body {
+  padding: 20px;
+  background-color: white;
+}
+
+/* Payment success styling */
+.buy-container .payment-success {
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.buy-container .success-icon {
+  width: 80px;
+  height: 80px;
+  background-color: #26a69a; /* Sea Green */
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  margin: 0 auto 20px;
+}
+
+.buy-container .payment-success h2 {
+  color: #26a69a; /* Sea Green */
+  margin-bottom: 20px;
+}
+
+.buy-container .payment-success p {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* Form styling */
+.buy-container .form-check {
+  text-align: left;
+}
+
+.buy-container .alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+  border-color: #f5c6cb;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .buy-container {
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  .buy-container .card-header {
+    padding: 10px 15px;
+  }
+  
+  .buy-container .card-body {
+    padding: 15px;
+  }
+}

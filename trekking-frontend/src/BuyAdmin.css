@@ -1,0 +1,155 @@
+/* BuyAdmin.css */
+
+/* Using more specific selectors to avoid conflicts with Home.css */
+
+.admin-container {
+  padding: 40px; /* More padding */
+  max-width: 1200px;
+  margin: 20px auto; /* Centered with top/bottom margin */
+  background-color: #ffffff; /* White background */
+  border-radius: 15px; /* More rounded corners */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  color: #333333; /* Dark text */
+  border: 1px solid #e0e0e0;
+}
+
+.admin-container h1 {
+  text-align: center;
+  color: #26a69a; /* Sea Green */
+  margin-bottom: 20px; /* More space */
+  font-weight: 700; /* Bolder */
+  font-size: 3rem; /* Larger heading */
+  text-shadow: none;
+}
+
+.admin-container h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: #26a69a; /* Sea Green */
+}
+
+/* Card styling */
+.admin-container .card {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  background-color: #e0f2f1; /* Very light sea green */
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-container .card-header {
+  padding: 15px 20px;
+  background-color: #26a69a; /* Sea Green */
+  color: white;
+}
+
+.admin-container .card-body {
+  padding: 25px;
+  background-color: #fff;
+}
+
+/* Form styling */
+.admin-container .form-group input,
+.admin-container .form-group textarea {
+  font-size: 1.1rem; /* Slightly larger font */
+  padding: 12px; /* More padding */
+  border: 1px solid #ddd;
+  border-radius: 8px; /* More rounded */
+  color: #333333; /* Dark text in inputs */
+  margin-bottom: 15px;
+}
+
+.admin-container .form-group input:focus,
+.admin-container .form-group textarea:focus {
+  outline: none;
+  border-color: #26a69a; /* Sea Green */
+  box-shadow: 0 0 0 0.25rem rgba(38, 166, 154, 0.25); /* Subtle sea green focus shadow */
+}
+
+/* Button styling */
+.admin-container .btn-primary {
+  background-color: #26a69a !important; /* Sea Green for primary button */
+  border: none !important;
+  color: white !important;
+  font-weight: bold;
+  padding: 0.85rem 1.8rem; /* Larger padding */
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 1.1rem;
+}
+
+.admin-container .btn-primary:hover {
+  background-color: #00796b !important; /* Dark Sea Green on hover */
+  transform: translateY(-3px); /* More pronounced lift effect */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.admin-container .btn-secondary {
+  background-color: #6c757d;
+  border: none;
+  color: white;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+}
+
+.admin-container .btn-danger {
+  background-color: #dc3545 !important;
+  border: none !important;
+  color: white !important;
+}
+
+/* Table styling */
+.admin-container .table {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.admin-container .table thead th {
+  background-color: #e0f2f1; /* Very light sea green */
+  border-bottom: 2px solid #b2dfdb; /* Light sea green border */
+  color: #00796b; /* Dark Sea Green text */
+  font-weight: 600;
+}
+
+.admin-container .table tbody tr:hover {
+  background-color: #e0f2f1; /* Very light sea green */
+}
+
+.admin-container .table td,
+.admin-container .table th {
+  vertical-align: middle;
+  padding: 12px 15px;
+}
+
+/* Status messages */
+.admin-container .text-center {
+  margin: 20px 0;
+}
+
+.admin-container .text-danger {
+  color: #dc3545 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .admin-container {
+    padding: 20px;
+  }
+  
+  .admin-container h1 {
+    font-size: 2rem;
+  }
+  
+  .admin-container .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .admin-container .table {
+    font-size: 0.9rem;
+  }
+}

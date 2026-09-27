@@ -1,0 +1,20 @@
+# Backend
+trekking-backend/target/
+trekking-backend/.classpath
+trekking-backend/.project
+trekking-backend/.settings/
+
+# Frontend
+trekking-frontend/node_modules/
+trekking-frontend/build/
+
+# Environment files
+.env
+*.env
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db

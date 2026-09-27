@@ -1,0 +1,76 @@
+.container {
+  max-width: 1000px;
+}
+
+h2 {
+  font-weight: bold;
+  color: #26a69a; /* Sea green color */
+}
+
+form input,
+form textarea {
+  border-radius: 0.5rem;
+  border: 1px solid #e0e0e0;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #26a69a;
+  box-shadow: 0 0 0 0.25rem rgba(38, 166, 154, 0.25);
+  outline: none;
+}
+
+.btn-primary {
+  background-color: #26a69a;
+  border-color: #26a69a;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #00796b;
+  border-color: #00796b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:disabled {
+  background-color: #80cbc4;
+  border-color: #80cbc4;
+}
+
+.heading {
+  height: 10vh;
+  width: 100%;
+  background-color: #26a69a;
+  margin-bottom: 5vh;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading h2 {
+  line-height: normal;
+  color: white;
+  margin: 0;
+}
+
+.alert {
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.alert-success {
+  background-color: rgba(38, 166, 154, 0.1);
+  border-color: rgba(38, 166, 154, 0.2);
+  color: #00796b;
+}
+
+.alert-danger {
+  background-color: rgba(244, 67, 54, 0.1);
+  border-color: rgba(244, 67, 54, 0.2);
+  color: #d32f2f;
+}

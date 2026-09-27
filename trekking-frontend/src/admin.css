@@ -1,0 +1,253 @@
+/* admin.css - scoped to avoid conflicts with Home.css */
+
+.admin-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #b3dee6;
+  min-height: 100vh;
+  color: #1f5363;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #3a7b8f;
+  padding-bottom: 15px;
+}
+
+.admin-header h2 {
+  font-size: 2rem;
+  color: #135566;
+  margin: 0;
+}
+
+.admin-nav {
+  display: flex;
+  gap: 10px;
+}
+
+.admin-nav-btn {
+  background-color: #1e7f9d;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.admin-nav-btn:hover {
+  background-color: #15637c;
+}
+
+/* Alert and Info Banners */
+.admin-alert {
+  background-color: #d1ecf1;
+  color: #0c5460;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  border-left: 5px solid #0c5460;
+}
+
+.admin-info-banner {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  border-left: 5px solid #856404;
+}
+
+/* Loading State */
+.admin-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+  min-height: 300px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(30, 127, 157, 0.2);
+  border-radius: 50%;
+  border-top-color: #1e7f9d;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.admin-section {
+  background-color: white;
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admin-section h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #1e7f9d;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+.admin-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-group:nth-child(3) {
+  grid-column: 1;
+}
+
+.form-group:nth-child(4) {
+  grid-column: 1 / span 2;
+}
+
+.admin-submit-btn {
+  grid-column: 1 / span 2;
+  background-color: #1e7f9d;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+  margin-top: 10px;
+}
+
+.admin-submit-btn:hover {
+  background-color: #15637c;
+}
+
+.admin-submit-btn:disabled {
+  background-color: #b3b3b3;
+  cursor: not-allowed;
+}
+
+.admin-items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.admin-item {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  position: relative;
+  background-color: #f8f9fa;
+}
+
+.admin-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.admin-item-header h4 {
+  margin: 0;
+  color: #1e7f9d;
+}
+
+.price {
+  font-weight: bold;
+  color: #e63946;
+  margin: 8px 0;
+}
+
+.delete-btn {
+  background-color: #e63946;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.images-info {
+  margin-top: 10px;
+  color: #6c757d;
+}
+
+.rules-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.rules-form input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.rules-list {
+  list-style: none;
+  padding: 0;
+}
+
+.rule-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.rule-content {
+  flex: 1;
+}
+
+.delete-rule-btn {
+  background-color: #e63946;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}

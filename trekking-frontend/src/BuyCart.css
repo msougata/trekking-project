@@ -1,0 +1,158 @@
+/* BuyCart.css */
+
+/* Using more specific selectors to avoid conflicts with Home.css */
+
+.cart-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff; /* White background */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333333; /* Dark text */
+  border: 1px solid #e0e0e0;
+}
+
+.cart-container h1 {
+  margin-bottom: 25px;
+  color: #26a69a; /* Sea Green */
+}
+
+.cart-container h4 {
+  color: #26a69a; /* Sea Green */
+  font-weight: 600;
+}
+
+.cart-container .cart-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cart-container .cart-list li {
+  background: #e0f2f1; /* Very light sea green */
+  margin-bottom: 15px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  border-left: 6px solid #00796b; /* Dark sea green border */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.cart-container .cart-list li:hover {
+  background-color: #b2dfdb; /* Light sea green on hover */
+  transition: background-color 0.2s ease-in-out;
+}
+
+.cart-container .cart-empty {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #757575; /* Medium gray text */
+}
+
+.cart-container .list-group-item {
+  background-color: #e0f2f1; /* Very light sea green */
+  border-color: #80cbc4; /* Light sea green */
+  color: #333333; /* Dark text */
+  margin-bottom: 8px;
+}
+
+.cart-container .btn-success {
+  background-color: #26a69a; /* Sea Green */
+  border: none;
+  padding: 10px 20px;
+  font-weight: 600;
+}
+
+.cart-container .btn-primary {
+  background-color: #26a69a; /* Sea Green */
+  border: none;
+  padding: 8px 16px;
+  font-weight: 500;
+}
+
+.cart-container .btn-secondary {
+  background-color: #e0e0e0; /* Light gray */
+  color: #333333; /* Dark text */
+  border: none;
+  padding: 8px 16px;
+  font-weight: 500;
+}
+
+/* Table styling */
+.cart-container .table {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cart-container .table thead {
+  background-color: #00796b; /* Dark Sea Green */
+  color: white;
+}
+
+.cart-container .table th {
+  padding: 12px 15px;
+  font-weight: 600;
+  border-bottom: none;
+}
+
+.cart-container .table td {
+  padding: 12px 15px;
+  vertical-align: middle;
+}
+
+.cart-container .table tbody tr {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.cart-container .table tbody tr:hover {
+  background-color: #e0f2f1; /* Very light sea green */
+}
+
+.cart-container .table tfoot {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+/* Quantity control styling */
+.cart-container .quantity-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-container .quantity-control button {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-weight: bold;
+}
+
+.cart-container .quantity-control span {
+  min-width: 30px;
+  text-align: center;
+}
+
+/* Button styling */
+.cart-container .btn-danger {
+  background-color: #dc3545;
+  border: none;
+}
+
+.cart-container .btn-outline-secondary {
+  color: #26a69a; /* Sea Green */
+  border-color: #26a69a; /* Sea Green */
+}
+
+.cart-container .btn-outline-secondary:hover {
+  background-color: #26a69a; /* Sea Green */
+  color: white;
+}

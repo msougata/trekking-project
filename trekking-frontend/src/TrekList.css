@@ -1,0 +1,71 @@
+.trek-list-container {
+  padding: 40px 20px;
+  background-color: #ff0000;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.trek-list-title {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.trek-card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.trek-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trek-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.trek-card h3 {
+  font-size: 1.4rem;
+  color: #222;
+  margin-bottom: 12px;
+}
+
+.trek-card p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.trek-card .view-button {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.trek-card .view-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .trek-card {
+    width: 90%;
+  }
+}
